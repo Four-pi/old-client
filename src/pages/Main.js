@@ -82,7 +82,7 @@ export default function Main () {
     return (
         <div>
             <h4>port 승인 테이블</h4>
-            <table>
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>date</th>
