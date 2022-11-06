@@ -5,7 +5,7 @@ import axios from "axios";
 const useMockup = true;
 const mockupData = [
     {
-        data: '보민',
+        date: '보민',
         port: 3000,
         request: 'request',
         service: 'service',
@@ -13,7 +13,7 @@ const mockupData = [
         number: 'number',
     },
     {
-        data: '보민2',
+        date: '보민2',
         port: 3001,
         request: 'request2',
         service: 'service2',
@@ -21,42 +21,42 @@ const mockupData = [
         number: 'numbe2r',
     },
     {
-        data: "2022-11-031",
+        date: "2022-11-031",
         port: "1",
         request: "1",
         service: 1,
         number: "1",
     },
     {
-        data: "2022-11-031",
+        date: "2022-11-031",
         port: "1",
         request: "1",
         service: 1,
         number: "1",
     },
     {
-        data: "2022-11-03a",
+        date: "2022-11-03a",
         port: "a",
         request: "a",
         service: "a",
         number: "a",
     },
     {
-        data: "2022-11-031",
+        date: "2022-11-031",
         port: "1",
         request: "1",
         service: 1,
         number: "1",
     },
     {
-        data: "2022-11-033",
+        date: "2022-11-033",
         port: "3",
         request: "3",
         service: 3,
         number: "3",
     },
     {
-        data: "2022-11-0312",
+        date: "2022-11-0312",
         port: "asdasd",
         request: "ssh",
         service: "a@a.com",
@@ -97,7 +97,7 @@ export default function Main () {
                         </tr>
                     </thead>
                     <tbody>
-                        {data.map((item, index) => createRow(index, item.data, item.port, item.request, item.service, item.mail, item.number))}
+                        {data.map((item, index) => createRow(index, item.date, item.port, item.request, item.service, item.mail, item.number))}
                     </tbody>
                 </table>
             </div>
@@ -115,10 +115,10 @@ async function loadData() {
     return response.data;
 };
 
-function createRow(rowNo, data, port, request, service, mail, number) {
+function createRow(rowNo, date, port, request, service, mail, number) {
     return (
         <tr key={`main.table-row.${rowNo}`}>
-            <td>{data}</td>
+            <td>{date}</td>
             <td>{port}</td>
             <td>{request}</td>
             <td>{service}</td>
