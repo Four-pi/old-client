@@ -40,52 +40,77 @@ const AddEdit = () => {
 		const { name, value } = e.target;
 		setState({ ...state, [name]: value });
 	};
-	return <div>
+	return <div class="p-3">
+		<div className="mb-3">
+			<h2>Join</h2>
+		</div>
 		<form onSubmit={handleSubmit}>
-			<label htmlFor="name">Name</label>
-			<input
-				type="text"
-				id="name"
-				name="name"
-				value={name}
-				onChange={handleInputChange}
-			/>
-			<label htmlFor="userid">UserID</label>
-			<input
-				type="text"
-				id="userid"
-				name="userid"
-				value={userid}
-				onChange={handleInputChange}
-			/>
-			<label htmlFor='pw'>PW</label>
-			<input
-				type="password"
-				id="pw"
-				name="pw"
-				value={pw}
-				onChange={handleInputChange}
-			/>
-			<label htmlFor='email'>Email</label>
-			<input
-				type="text"
-				id="mail"
-				name="mail"
-				value={mail}
-				onChange={handleInputChange}
-			/>
-			<label htmlFor='phone'>Phone</label>
-			<input
-				type="text"
-				id="number"
-				name="number"
-				value={number}
-				onChange={handleInputChange}
-			/>
-			<input type="submit" value="Sign up" />
-			<Link to="/">
-				<input type="button" value="취소" />
-			</Link>
+			<p>로그인 정보</p>
+			<div class="form-floating mb-3">
+				<input type="text"
+					class="form-control"
+					id="userid"
+					name="userid"
+					placeholder="id"
+					value={userid}
+					onChange={handleInputChange}
+				/>
+				<label for="floatingInput">User ID</label>
+			</div>
+			<div class="form-floating mb-3">
+				<input type="password"
+					class="form-control"
+					id="pw"
+					name="pw"
+					placeholder="password"
+					value={pw}
+					onChange={handleInputChange}
+				/>
+				<label for="floatingInput">Password</label>
+			</div>
+
+			<p>사용자 정보</p>
+			<div class="form-floating mb-3">
+				<input type="text"
+					class="form-control"
+					id="name"
+					name="name"
+					placeholder="Bomin"
+					value={name}
+					onChange={handleInputChange}
+				/>
+				<label for="floatingInput">Name</label>
+			</div>
+			<div class="form-floating mb-3">
+				<input type="email"
+					class="form-control"
+					id="mail"
+					name="mail"
+					placeholder="name@example.com"
+					value={mail}
+					onChange={handleInputChange}
+				/>
+				<label for="floatingInput">Email address</label>
+			</div>
+			<div class="form-floating mb-3">
+				<input type="text"
+					class="form-control"
+					id="number"
+					name="number"
+					placeholder="000-0000-0000"
+					value={number}
+					onChange={handleInputChange}
+				/>
+				<label for="floatingInput">Phone Number</label>
+			</div>
+
+			<div class="form-floating mt-4 text-end">
+				<input class="btn btn-success mx-3 px-3" type="submit" value="Sign up" />
+				<Link to="/">
+					<input class="btn btn-danger px-3" type="button" value="취소" />
+				</Link>
+			</div>
+
 		</form>
 	</div>;
 };
