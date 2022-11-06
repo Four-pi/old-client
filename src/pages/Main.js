@@ -81,25 +81,31 @@ export default function Main () {
 
     return (
         <div>
-            <h4>port 승인 테이블</h4>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>date</th>
-                        <th>port</th>
-                        <th>request</th>
-                        <th>service</th>
-                        <th>mail</th>
-                        <th>number</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {data.map((item, index) => createRow(index, item.data, item.port, item.request, item.service, item.mail, item.number))}
-                </tbody>
-            </table>
-            <Link to="/addport">
-                <button>승인 신청</button>
-            </Link>
+            <div class="my-2 p-2">
+                <h1>port 승인 테이블</h1>
+            </div>
+            <div class="my-2">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>date</th>
+                            <th>port</th>
+                            <th>request</th>
+                            <th>service</th>
+                            <th>mail</th>
+                            <th>number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {data.map((item, index) => createRow(index, item.data, item.port, item.request, item.service, item.mail, item.number))}
+                    </tbody>
+                </table>
+            </div>
+            <div class="my-2 p-2">
+                <Link to="/addport">
+                    <button type="button" class="btn btn-primary primary-bg-color" >승인 신청</button>
+                </Link>
+            </div>
         </div>
     );
 };
