@@ -32,7 +32,7 @@ export default function Main () {
                     </tr>
                 </thead>
                 <tbody>
-                    {data.map((item) => createRow(item.data, item.port, item.request, item.service, item.mail, item.number))}
+                    {data.map((item, index) => createRow(index, item.data, item.port, item.request, item.service, item.mail, item.number))}
                 </tbody>
             </table>
             <Link to="/addport">
@@ -63,9 +63,9 @@ function useMockData() {
     ]
 }
 
-function createRow(data, port, request, service, mail, number) {
+function createRow(rowNo, data, port, request, service, mail, number) {
     return (
-        <tr>
+        <tr key={`table-row.${rowNo}`}>
             <td>{data}</td>
             <td>{port}</td>
             <td>{request}</td>
