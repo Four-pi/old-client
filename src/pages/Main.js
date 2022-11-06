@@ -101,9 +101,9 @@ export default function Main () {
                     </tbody>
                 </table>
             </div>
-            <div class="my-2 p-2">
+            <div class="my-2 p-2 text-end">
                 <Link to="/addport">
-                    <button type="button" class="btn btn-success" >승인 신청</button>
+                    <button type="button" class="btn btn-success mx-3 px-3" >승인 신청</button>
                 </Link>
             </div>
         </div>
