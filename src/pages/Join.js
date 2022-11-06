@@ -51,7 +51,6 @@ const AddEdit = () => {
 					class="form-control"
 					id="userid"
 					name="userid"
-					placeholder="id"
 					value={userid}
 					onChange={handleInputChange}
 				/>
@@ -62,7 +61,6 @@ const AddEdit = () => {
 					class="form-control"
 					id="pw"
 					name="pw"
-					placeholder="password"
 					value={pw}
 					onChange={handleInputChange}
 				/>
@@ -75,7 +73,6 @@ const AddEdit = () => {
 					class="form-control"
 					id="name"
 					name="name"
-					placeholder="Bomin"
 					value={name}
 					onChange={handleInputChange}
 				/>
@@ -86,7 +83,6 @@ const AddEdit = () => {
 					class="form-control"
 					id="mail"
 					name="mail"
-					placeholder="name@example.com"
 					value={mail}
 					onChange={handleInputChange}
 				/>
@@ -97,7 +93,6 @@ const AddEdit = () => {
 					class="form-control"
 					id="number"
 					name="number"
-					placeholder="000-0000-0000"
 					value={number}
 					onChange={handleInputChange}
 				/>
