@@ -1,11 +1,11 @@
-import React, { useState, useEffect} from 'react';
+import React from 'react';
 import Today from './Today';
 import Yesterday from './Ysday';
 const Compare = () => {
-	return(
+	return (
 		<div>
-		<Today />
-		<Yesterday />
+			<Today />
+			<Yesterday />
 		</div>
 	)
 };
