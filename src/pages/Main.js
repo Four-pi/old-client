@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const Main = () => {
+export default function Main () {
     const [data, setData] = useState([]);
 
     const loadData = async () => {
@@ -30,14 +30,15 @@ const Main = () => {
                 </thead>
                 <tbody>
                     {data.map((item, index) => {
+                        const { data, port, request, service, mail, number } = item;
                         return (
                             <tr>
-                                <td>{item.date}</td>
-                                <td>{item.port}</td>
-                                <td>{item.request}</td>
-                                <td>{item.service}</td>
-                                <td>{item.mail}</td>
-                                <td>{item.number}</td>
+                                <td>{data}</td>
+                                <td>{port}</td>
+                                <td>{request}</td>
+                                <td>{service}</td>
+                                <td>{mail}</td>
+                                <td>{number}</td>
                             </tr>
                         )
                     })}
@@ -49,5 +50,3 @@ const Main = () => {
         </div>
     );
 };
-
-export default Main;
