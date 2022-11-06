@@ -103,7 +103,7 @@ export default function Main () {
             </div>
             <div class="my-2 p-2">
                 <Link to="/addport">
-                    <button type="button" class="btn btn-primary primary-bg-color" >승인 신청</button>
+                    <button type="button" class="btn btn-success" >승인 신청</button>
                 </Link>
             </div>
         </div>
