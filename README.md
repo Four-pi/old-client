@@ -1,3 +1,13 @@
+# 사용법
+
+Node.js가 설치된 운영체제의 터미널에서...
+
+```shell
+npm install
+npm start
+```
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
