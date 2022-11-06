@@ -42,61 +42,78 @@ const AddEdit = () => {
 		const { name, value } = e.target;
 		setState({ ...state, [name]: value });
 	};
-	return <div>
+	return <div class="p-3">
+		<div className="mb-3">
+			<h2>Add Port</h2>
+		</div>
 		<form onSubmit={handleSubmit}>
-			<label htmlFor="ip">IP</label>
-			<input
-				type="text"
-				id="ip"
-				name="ip"
-				value={ip}
-				onChange={handleInputChange}
-			/>
-			<label htmlFor="port">PORT</label>
-			<input
-				type="text"
-				id="port"
-				name="port"
-				value={port}
-				onChange={handleInputChange}
-			/>
-			<label htmlFor='request'>request</label>
-			<input
-				type="text"
-				id="request"
-				name="request"
-				value={request}
-				onChange={handleInputChange}
-			/>
-			<label htmlFor='service'>service</label>
-			<input
-				type="text"
-				id="service"
-				name="service"
-				value={service}
-				onChange={handleInputChange}
-			/>
-			<label htmlFor='mail'>mail</label>
-			<input
-				type="text"
-				id="mail"
-				name="mail"
-				value={mail}
-				onChange={handleInputChange}
-			/>
-			<label htmlFor='number'>number</label>
-			<input
-				type="text"
-				id="number"
-				name="number"
-				value={number}
-				onChange={handleInputChange}
-			/>
+			<div class="form-floating mb-3">
+				<input type="text"
+					class="form-control"
+					id="ip"
+					name="ip"
+					value={ip}
+					onChange={handleInputChange}
+				/>
+				<label for="floatingInput">IP Address</label>
+			</div>
+			<div class="form-floating mb-3">
+				<input type="number"
+					class="form-control"
+					id="port"
+					name="port"
+					value={port}
+					onChange={handleInputChange}
+				/>
+				<label for="floatingInput">Port</label>
+			</div>
+			<div class="form-floating mb-3">
+				<input type="text"
+					class="form-control"
+					id="request"
+					name="request"
+					value={request}
+					onChange={handleInputChange}
+				/>
+				<label for="floatingInput">Request</label>
+			</div>
+			<div class="form-floating mb-3">
+				<input type="text"
+					class="form-control"
+					id="service"
+					name="service"
+					value={service}
+					onChange={handleInputChange}
+				/>
+				<label for="floatingInput">Service</label>
+			</div>
+			<div class="form-floating mb-3">
+				<input type="email"
+					class="form-control"
+					id="mail"
+					name="mail"
+					value={mail}
+					onChange={handleInputChange}
+				/>
+				<label for="floatingInput">E-mail</label>
+			</div>
+			<div class="form-floating mb-3">
+				<input type="text"
+					class="form-control"
+					id="number"
+					name="number"
+					value={number}
+					onChange={handleInputChange}
+				/>
+				<label for="floatingInput">Number</label>
+			</div>
 
-			<input type="submit" value="승인 신청" />
-			<Link to="/">
-				<input type="button" value="취소" />
-			</Link>
+			<div class="form-floating mt-4 text-end">
+				<input class="btn btn-success mx-3 px-3" type="submit" value="승인 신청" />
+				<Link to="/">
+					<input class="btn btn-danger px-3" type="button" value="취소" />
+				</Link>
+			</div>
 		</form>
 	</div>;
 };
